@@ -16,4 +16,9 @@ int main()
 	int thread = 256;
 	int blocks = cuda::ceil_div(4, thread);
 
+	float a[4] = { 1,2,3,4 };
+	float b[4] = { 1,2,3,4 };
+	float c[4] = {};
+	vecAdd << <blocks, thread >> > (a, b, c);
+
 }
