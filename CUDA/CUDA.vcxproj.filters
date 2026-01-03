@@ -15,6 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <CudaCompile Include="main.cpp" />
+    <CudaCompile Include="Kernel.cu" />
   </ItemGroup>
 </Project>
