@@ -7,9 +7,13 @@
 //Runs on the GPU
 __device__ void vecAdd(float* a, float* b, float* c, int vectorSize)
 {
+	//What index should the threads be working on?
 	int workindex = threadIdx.x + blockDim.x * blockIdx.x;
 
-	c[workindex] = a[workindex] + b[workindex];
+	if (workindex < vectorSize)
+	{
+		c[workindex] = a[workindex] + b[workindex];
+	}
 }
 
 //Runs on the CPU
